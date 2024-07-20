@@ -1,0 +1,92 @@
+
+div.profile-img{
+    background-color: rgb(230, 230, 230);
+    width: 50px;
+    height: 50px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+div.head-design{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: gray;
+    top: 5px;
+    border-radius: inherit;
+    justify-self: center;
+}
+
+div.body-design{
+    border-radius: inherit;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    top: 10px;
+    background-color: grey;
+}
+
+div.profile-img:hover{
+    border-color: green;
+    border-width: 10px;
+}
+
+div.comment-button{
+    scale: .7;
+    background-color: rgb(230, 230, 230);
+    height: 35px;
+    width: 45px;
+    border-radius: 90%;
+    display: grid;
+}
+
+div.comment-tail{
+    background-color: inherit;
+    height: 18px;
+    width: 18px;
+    position: relative;
+    rotate: 87deg;
+    top: 16px;
+    justify-self: end;
+}
+
+div.comment-circle{
+    color: rgb(150, 150, 150);
+    font-size: 30px;
+    top: -25px;
+    left:3px;
+    position: relative;
+    font-weight: bold;
+}
+
+div.favourite-button-design{
+    display: grid;
+    width: 32px;
+    height: 32px;
+    background-color: inherit;
+}
+
+div.favourite-button-leg1{
+    width: 15px;
+    height: 10px;
+    background-color: inherit;
+    align-self: end;
+    position: relative;
+    top:25px;
+    border-bottom-right-radius: 100%;
+}
+
+div.favourite-button-leg2{
+    width: 15px;
+    height: 10px;
+    background-color: inherit;
+    align-self: end;
+    justify-self: end;
+    position: relative;
+    top: 8px;
+    border-bottom-left-radius: 100%;
+}
+

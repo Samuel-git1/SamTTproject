@@ -1,0 +1,129 @@
+body{
+    background-color: rgb(50, 50, 50);
+    display: flex;
+    overflow: hidden;
+    color: white;
+    height: 100vh;
+    align-content: center;
+    margin: 0;
+}
+
+div.main-bar{
+    position: fixed;
+    /* background-color: inherit; */
+    height: fit-content;
+}
+
+div.main-content{
+    display: grid;
+    align-self: center;
+    width: 80vw;
+    background-color: rgba(30, 30, 30, 0.5);
+    height: 100vh;
+    padding: 10px;
+    margin: auto;
+}
+
+video.content-video{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    max-height: 500px;
+    max-width: 90%;
+}
+
+div.right-arrow, div.left-arrow{
+    height: 5vw;
+    width: 5vw;
+    padding: 0;
+    background-color: red;
+    border-radius: 100%;
+    color: white;
+    font-size: 5vw;
+    position: fixed;
+}
+
+div.arrow-container{
+    position: fixed;
+    width: 90vw;
+    padding: 0;
+    margin-left: 5vw;
+    display: grid;
+    align-self: center;
+}
+
+div.right-arrow{
+    justify-self: flex-start;
+}
+div.left-arrow{
+    justify-self: flex-end;
+}
+
+div.options-container{
+    opacity: .8;
+    width: fit-content;
+    display: grid;
+    position: fixed;
+    left: 70vw;
+    top: 35vh;
+
+}
+
+div.likebutton{
+    border-radius: 100%;
+    justify-self: center;
+    width: fit-content;
+    height: fit-content;
+    font-size: 50px;
+    position: relative;
+    color: rgb(230, 230, 230);
+}
+
+div.favoritebutton{
+    margin: auto;
+    scale: .8;
+    z-index: 0;
+    background-color: rgb(230, 230, 230);;
+    width: fit-content;
+    height: 30px;
+    justify-self: end;
+    position: relative;
+    margin-top: 15px;
+}
+
+footer{
+    position: relative;
+    font-size: 30px;
+    justify-self: center;
+}
+
+@media screen  and (max-width : 500px){ 
+
+    div.options-container{
+        left: 80vw;
+        top: 30vh;
+    }
+
+    div.right-arrow, div.left-arrow{
+        width: 15vw;
+        height: 15vw;
+        font-size: 15vw;
+    }
+
+    footer{
+        font-size: 25px;
+    }
+
+    video.content-video{
+        margin-top: 90px;
+        max-width: 270px;
+    }
+
+    div.arrow-container{
+        margin-top: 200px;
+    }
+
+    div.profile-img{
+        scale: .8;
+    }
+}
