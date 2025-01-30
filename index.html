@@ -92,6 +92,27 @@
             opacity: 0;
         }
 
+        @media only screen and (max-width: 600px) {
+
+            #mainbody{
+                grid-template-rows: 70% 15% 15%;
+                height: 80%;
+            }
+
+            #yesbutton, #nobutton {
+                grid-column: 2;
+                padding: 20px;
+                justify-self: center;
+            }
+            #nobutton{
+                grid-row: 3;
+            }
+            #yesbutton{
+                grid-row: 2;
+            }
+
+        }
+
     </style>
 </head>
 
@@ -138,6 +159,8 @@
         YippeImg4.style.opacity = 1;
         Yesbutton.style.gridColumnStart = 1;
         Yesbutton.style.gridColumnEnd = 3;
+        ExplosionImg.style.zIndex = 0;
+        ExplosionImg.style.opacity = 0;
     }
 
 </script>
