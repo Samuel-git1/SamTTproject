@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Val??</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            background-color: pink;
+            justify-content: center;
+            height: 90vh;
+            text-align: center;
+            color: white;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        #mainbody {
+            display: grid;
+            width: 50%;
+            height: 50%;
+            padding: 10px;
+            grid-template-rows: 80% 20%;
+            grid-template-columns: 10% 80% 10%;
+            grid-row: 2;
+            grid-column: 3;
+        }
+
+        #nobutton,
+        #yesbutton {
+            font: 20px bold;
+            font-family: 'Courier New', Courier, monospace;
+            width: 100px;
+            height: fit-content;
+            padding: 15px;
+            border-radius: 50px;
+            grid-row: 2;
+            align-self: flex-end;
+        }
+
+        #nobutton:hover,
+        #yesbutton:hover {
+            cursor: pointer;
+        }
+
+        #yesbutton {
+            background-color: rgb(0, 255, 0);
+            grid-column: 1;
+        }
+
+        #nobutton {
+            background-color: rgb(255, 0, 0);
+            grid-column: 3;
+            justify-self: flex-end;
+            font-size: 20px;
+            position: absolute;
+        }
+
+        #center {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        #after-text {
+            font-size: 20px;
+            color: black;
+        }
+
+        #explosion {
+            /* position: absolute; */
+            grid-row: 2;
+            grid-column: 3;
+            z-index: -1;
+            justify-self: flex-end;
+            opacity: 0;
+        }
+
+        img#center {
+            height: inherit;
+            width: inherit;
+        }
+
+        img.yippeImg{
+            position: absolute;
+            opacity: 0;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #yesbutton, #nobutton {
+                grid-column: 2;
+                padding: 20px;
+                    }
+            #yesbutton{
+                grid-row: 3;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Will you be my valentines??</h1>
+    <div id="mainbody">
+        <div id="center" alt="gif/filling"><img draggable="false" id='center' src="media/cat-gif (2).gif" alt=""></div>
+        <div id="yesbutton" onclick="clickedYes()">Yes 🤩</div>
+        <div id="nobutton" onclick="clickedNo()">No 🤕</div>
+        <img id="explosion" src="media/explosion (2).gif" alt="" draggable="false">
+    </div>
+    <img src="media/yippe (1).gif" alt="" draggable="false" id="yippeImg1" class="yippeImg" style="top: 50px;left: 390px;">
+    <img src="media/yippe (2).gif" alt="" draggable="false" id="yippeImg2" class="yippeImg" style="top: 170px;left: 30px;">
+    <img src="media/yippe (3).gif" alt="" draggable="false" id="yippeImg3" class="yippeImg" style="top: 240px;left: 775px;">
+    <img src="media/yippe (4).gif" alt="" draggable="false" id="yippeImg4" class="yippeImg" style="top: 432px;left: 990px;">
+
+
+    <p id="after-text"></p>
+</body>
+<script defer>
+    Yesbutton = document.getElementById('yesbutton');
+    Nobutton = document.getElementById('nobutton');
+    TextParagraph = document.getElementById('after-text');
+    ExplosionImg = document.getElementById('explosion');
+    MainBodyID = document.getElementById('mainbody');
+    YippeImg1 = document.getElementById('yippeImg1');
+    YippeImg2 = document.getElementById('yippeImg2');
+    YippeImg3 = document.getElementById('yippeImg3');
+    YippeImg4 = document.getElementById('yippeImg4');
+
+    function clickedNo() {
+        Nobutton.style.opacity = 0;
+        TextParagraph.innerText = 'Nice try😀. You only have one option';
+        ExplosionImg.style.zIndex = 1;
+        ExplosionImg.style.opacity = 1;
+    }
+
+    function clickedYes() {
+        TextParagraph.innerText = '😎😍😘🥰❤YIPPEE 🤩😶😚😂😁'
+        Nobutton.style.opacity = 0;
+        YippeImg1.style.opacity = 1;
+        YippeImg2.style.opacity = 1;
+        YippeImg3.style.opacity = 1;
+        YippeImg4.style.opacity = 1;
+        Yesbutton.style.gridColumnStart = 1;
+        Yesbutton.style.gridColumnEnd = 3;
+        ExplosionImg.style.zIndex = 0;
+        ExplosionImg.style.opacity = 0;
+    }
+
+</script>
+
+</html>
